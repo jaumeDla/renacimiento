@@ -1,0 +1,198 @@
+.container-auth {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    font-size: 18px;
+}
+
+.container-auth .content-left {
+    flex: 0.6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-auth .slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.container-auth .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: transform 1s ease, opacity 1.2s ease;
+}
+
+.container-auth .slide.active {
+    opacity: 1;
+    transform: translateX(0%);
+}
+
+.container-auth .slide.previous {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+.container-auth .slider-dots {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+}
+
+.container-auth .slider-dots .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.6);
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.container-auth .slider-dots .dot.active {
+    background-color: white;
+}
+
+.container-auth .content-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-auth .container-auth h1 {
+    margin-bottom: 60px;
+}
+
+.container-auth .content-signup {
+    text-align: center;
+    height: 600px;
+    width: 500px;
+}
+
+.container-auth .form-signup button {
+    margin-top: 30px;
+}
+
+.container-auth .form-signin button {
+    margin-top: 10px;
+}
+
+.container-auth .form-signin a {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.container-auth .content-signin {
+    text-align: center;
+    height: 600px;
+    width: 500px;
+}
+
+.container-auth input,
+.container-auth button {
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: medium;
+}
+
+.container-auth input {
+    background-color: rgb(225, 223, 223);
+    margin-bottom: 15px;
+    height: 50px;
+}
+
+.container-auth button {
+    transition: background-color 0.3s;
+    background-color: rgb(16, 125, 215);
+    color: white;
+}
+
+.container-auth button:disabled {
+    background-color: rgb(139, 169, 236);
+}
+
+.container-auth button:hover {
+    background-color: rgb(0, 95, 183);
+    cursor: pointer;
+}
+
+.container-auth .divider {
+    position: relative;
+    margin: 30px;
+}
+
+.container-auth .divider::before,
+.container-auth .divider::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 45%;
+    height: 1px;
+    background-color: grey;
+}
+
+.container-auth .divider::before {
+    left: 0;
+}
+
+.container-auth .divider::after {
+    right: 0;
+}
+
+.container-auth .options {
+    display: flex;
+    flex-direction: row;
+}
+
+.container-auth .options button {
+    margin: 5px;
+}
+
+.container-auth .altern {
+    margin-top: 30px;
+}
+
+.container-auth a {
+    text-decoration: none;
+    color: rgb(58, 58, 255);
+    cursor: pointer;
+}
+
+/* Errores */
+.container-auth input.error-input {
+    border: 2px solid red;
+    outline: none;
+}
+
+.container-auth .controller {
+    position: relative;
+}
+
+.container-auth .error-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: red;
+}
+
+/* Responsive */
+@media screen and (max-width: 750px) {
+    .container-auth .content-left {
+        flex: 0;
+    }
+}

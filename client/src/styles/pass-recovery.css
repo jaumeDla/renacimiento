@@ -1,0 +1,95 @@
+.container-pass-recovery {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+
+.content-pass-recovery {
+    height: auto;
+    width: 500px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    text-align: center;
+}
+
+.back-link {
+    color: black;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.arrow {
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid black;
+    margin-right: 10px;
+}
+
+.divider {
+    margin-top: 20px;
+}
+
+.form-pass-recovery {
+    margin-top: 0px;
+}
+
+.container-pass-recovery input {
+    background-color: rgb(225, 223, 223);
+}
+
+.container-pass-recovery button {
+    background-color: rgb(16, 125, 215);
+    color: white;
+}
+
+.container-pass-recovery button:hover {
+    background-color: rgb(0, 95, 183);
+    cursor: pointer;
+}
+
+.container-pass-recovery button:disabled {
+    background-color: rgb(139, 169, 236);
+    cursor: default;
+}
+
+.container-pass-recovery input,
+.container-pass-recovery button {
+    height: 50px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 10px;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: medium;
+}
+
+/* Errors */
+.container-pass-recovery input.error-input {
+    border: 2px solid red;
+    outline: none;
+}
+
+.controller {
+    position: relative;
+}
+
+.error-icon {
+    position: absolute;
+    top: 40%;
+    right: 10px;
+    color: red;
+    font-size: 24px;
+}
+
+.error-label {
+    margin-top: 6px;
+    border: 2px solid rgb(65, 1, 1);
+    background-color: rgb(191, 45, 45);
+}
